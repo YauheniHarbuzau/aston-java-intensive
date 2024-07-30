@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '6.5.1'
+}
+
+group = 'com.aston'
+version = '1.0'
+
+java {
+    sourceCompatibility = JavaLanguageVersion.of(17)
+    targetCompatibility = JavaLanguageVersion.of(17)
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    jUnitJupiterVersion = '5.7.0'
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitJupiterVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitJupiterVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+wrapper {
+    gradleVersion '8.8'
+}
