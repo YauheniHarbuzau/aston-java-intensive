@@ -16,12 +16,37 @@ repositories {
 }
 
 ext {
+    postgreSqlJdbcDriverVersion = '42.7.1'
+    snakeYamlVersion = '2.2'
+    fasterXmlJacksonVersion = '2.17.2'
+    mapStructVersion = '1.5.5.Final'
+    apacheTomcatEmbedVersion = '10.1.18'
     jUnitJupiterVersion = '5.7.0'
+    mockitoJUnitJupiterVersion = '5.12.0'
+    assertJCoreVersion = '3.24.2'
 }
 
 dependencies {
+    implementation "org.postgresql:postgresql:${postgreSqlJdbcDriverVersion}"
+
+    implementation "org.yaml:snakeyaml:${snakeYamlVersion}"
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:${fasterXmlJacksonVersion}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${fasterXmlJacksonVersion}"
+
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapStructVersion}"
+    implementation "org.mapstruct:mapstruct:${mapStructVersion}"
+    testAnnotationProcessor "org.mapstruct:mapstruct-processor:${mapStructVersion}"
+
+    implementation "org.apache.tomcat.embed:tomcat-embed-core:${apacheTomcatEmbedVersion}"
+    implementation "org.apache.tomcat.embed:tomcat-embed-jasper:${apacheTomcatEmbedVersion}"
+
     testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitJupiterVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitJupiterVersion}"
+
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockitoJUnitJupiterVersion}"
+
+    testImplementation "org.assertj:assertj-core:${assertJCoreVersion}"
 }
 
 test {

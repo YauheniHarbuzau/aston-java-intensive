@@ -1,0 +1,14 @@
+### Get By UUID
+GET http://localhost:8080/api/v1/pubs?uuid=8c0940bd-796a-4ae4-8791-933552a8ea76
+
+### Get All
+GET http://localhost:8080/api/v1/pubs
+
+### Create
+POST http://localhost:8080/api/v1/pubs?name=PUB&description=DESCRIPTION&pubAddressCountry=COUNTRY&pubAddressRegion=REGION&pubAddressCity=CITY&pubAddressStreet=STREET&pubAddressNumber=NUMBER
+
+### Update
+PUT http://localhost:8080/api/v1/pubs?uuid=8c0940bd-796a-4ae4-8791-933552a8ea76&name=PUB&description=DESCRIPTION&pubAddressCountry=COUNTRY&pubAddressRegion=REGION&pubAddressCity=CITY&pubAddressStreet=STREET&pubAddressNumber=NUMBER
+
+### Delete By UUID
+DELETE http://localhost:8080/api/v1/pubs?uuid=8c0940bd-796a-4ae4-8791-933552a8ea76
