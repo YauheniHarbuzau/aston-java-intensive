@@ -1,0 +1,14 @@
+### Get By UUID
+GET http://localhost:8080/api/v1/beers?uuid=b184082b-676d-495b-958f-92252a3b256e
+
+### Get All
+GET http://localhost:8080/api/v1/beers
+
+### Create
+POST http://localhost:8080/api/v1/beers?name=BEER&description=DESCRIPTION&factory=FACTORY&factoryAddressCountry=COUNTRY&factoryAddressRegion=REGION&factoryAddressCity=CITY&factoryAddressStreet=STREET&factoryAddressNumber=NUMBER&abv=5.5&og=10.0&ibu=10
+
+### Update
+PUT http://localhost:8080/api/v1/beers?uuid=b184082b-676d-495b-958f-92252a3b256e&name=BEER&description=DESCRIPTION&factory=FACTORY&factoryAddressCountry=COUNTRY&factoryAddressRegion=REGION&factoryAddressCity=CITY&factoryAddressStreet=STREET&factoryAddressNumber=NUMBER&abv=5.5&og=10.0&ibu=10
+
+### Delete By UUID
+DELETE http://localhost:8080/api/v1/beers?uuid=b184082b-676d-495b-958f-92252a3b256e
